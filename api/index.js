@@ -14,14 +14,6 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
 
-// CORS
-// I don't want to restrict the origin of the requests
-app.use(cors(
-    {
-        origin: '*'
-    }
-));
-
 // middleware
 app.use(express.json());
 
