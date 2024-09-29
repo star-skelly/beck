@@ -14,14 +14,16 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
 
-// middleware
-app.use(express.json());
-
+// CORS
+// I don't want to restrict the origin of the requests
 app.use(cors(
     {
         origin: 'http://localhost:3000'
     }
 ));
+
+// middleware
+app.use(express.json());
 
 // Configure Multer
 const upload = multer();
