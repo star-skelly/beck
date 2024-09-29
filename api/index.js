@@ -18,7 +18,7 @@ app.set('views', path.join(__dirname, 'views'))
 // I don't want to restrict the origin of the requests
 app.use(cors(
     {
-        origin: 'http://localhost:3000'
+        origin: '*'
     }
 ));
 
