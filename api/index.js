@@ -17,6 +17,12 @@ app.set('views', path.join(__dirname, 'views'))
 // middleware
 app.use(express.json());
 
+app.use(cors(
+    {
+        origin: 'http://localhost:3000'
+    }
+));
+
 // Configure Multer
 const upload = multer();
 
